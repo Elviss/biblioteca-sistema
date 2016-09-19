@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+	# ativa o modo de reescrita de URL
+	RewriteEngine on
+
+	# se não existir o arquivo ou diretorio especificado
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	# entao executa a seguinte regra
+	RewriteRule ^(.*) index.php
+</IfModule>
